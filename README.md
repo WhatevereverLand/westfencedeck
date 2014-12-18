@@ -1,4 +1,4 @@
-westfencedeck
-=============
+brochure-template
+=================
 
-westfenceanddeck.com web site
+Our brochure-style web site template
