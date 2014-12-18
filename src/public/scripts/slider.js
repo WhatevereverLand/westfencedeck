@@ -1,8 +1,7 @@
 $(function() {
-  var $slides = $('.slide');
+  var $arrowButtons = $('.slide-arrow-down');
 
-  $slides.click(function slideClick(event) {
-    console.log('event fired');
-    $(event.target).addClass('slideout');
+  $arrowButtons.click(function arrowClick(event) {
+    $(event.target).parents('.slide').addClass('slideout');
   });
 });

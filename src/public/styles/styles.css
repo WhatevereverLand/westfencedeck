@@ -1,5 +1,8 @@
 body {
   overflow: hidden;
+  background-image: url('../images/woodblurred.jpg');
+  background-size: 100% auto;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .centered {
@@ -42,8 +45,8 @@ body {
     opacity: 100%;
   }
   100%{
-    left: 2500px;
-    top:100px;
+    left: 0px;
+    top:25000px;
     opacity: 0%;
   }
 }
@@ -57,8 +60,8 @@ body {
     opacity: 100%;
   }
   100%{
-    left: 2500px;
-    top:100px;
+    left: 0px;
+    top:2000px;
     opacity: 0%;
   }
 }
@@ -72,8 +75,8 @@ keyframes slideOut {
     opacity: 100%;
   }
   100%{
-    left: 2500px;
-    top:100px;
+    left: 0px;
+    top:2500px;
     opacity: 0%;
   }
 }
@@ -104,17 +107,81 @@ keyframes slideOut {
 .slideout {
     position: relative;
     -moz-animation-name: slideOut;
-    -moz-animation-timing-function: ease-out;
-    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-duration: .5s;
     -moz-animation-fill-mode: forwards;
 
     -webkit-animation-name: slideOut;
-    -webkit-animation-timing-function: ease-out;
-    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-duration: .5s;
     -webkit-animation-fill-mode: forwards;
 
     animation-name: slideOut;
-    animation-timing-function: ease-out;
-    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-duration: .5s;
     animation-fill-mode: forwards;
+}
+
+.slide {
+  width: 75%;
+  height: 50%;
+  height: 50vh;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(0, 0, 0, .5);
+  padding-top: 1vh;
+  padding-bottom: 5vh;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.817647) 0px 1px 6px 0px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.slide-arrow {
+  transition: color 0.2s ease;
+}
+
+h1 {
+  font-size: 6vw;
+  letter-spacing: 1px;
+}
+
+.slide-arrow:hover {
+  color: lightblue;
+  cursor: pointer;
+}
+
+.slide-arrow-up {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.slide-arrow-down {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.nav {
+  display: inline-block;
+}
+
+.designed-by {
+  font-size: 10px;
+  position: fixed;
+  bottom: 0px;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+A:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
 }

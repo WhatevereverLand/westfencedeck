@@ -16,7 +16,8 @@ var options = {
      './src/public/styles/*.css'],
   javascriptDir: './src/public/scripts/**/*',
   sourceMapDir: '/scripts/map',
-	htmlDir: 'src/public/*.html'
+	htmlDir: 'src/public/*.html',
+	imagesDir: 'src/public/images/*'
 };
 
 /**
@@ -51,11 +52,8 @@ gulp.task('javascript', function() {
 
   // Concatenate them and then point the map to them.
   glob
-    .pipe(uglify('app.js', {
-      'outSourceMap': true,
-      'sourceMapRoot': 'http://localhost:8080/scripts'
-    }))
-		.pipe(gulp.dest(options.buildDir + './scripts'));
+    .pipe(uglify('app.js'))
+		.pipe(gulp.dest(options.buildDir + '/scripts'));
 });
 
 /**
@@ -66,6 +64,16 @@ gulp.task('html', function() {
 
   glob.
     pipe(gulp.dest(options.buildDir));
+});
+
+/**
+ * Other assets
+ */
+gulp.task('images', function() {
+  var glob = gulp.src(options.imagesDir);
+
+  glob
+    .pipe(gulp.dest(options.buildDir + '/images'));
 });
 
 /**
@@ -92,10 +100,10 @@ gulp.task('serve', function() {
 	livereload.listen();
 });
 
-gulp.task('build', ['clean', 'javascript', 'styles', 'html']);
+gulp.task('build', ['clean', 'javascript', 'styles', 'html', 'images']);
 
 // Watch all the things
-gulp.task('watch', ['watch-styles', 'watch-html', 'watch-javascript', 'serve']);
+gulp.task('watch', ['build', 'watch-styles', 'watch-html', 'watch-javascript', 'serve']);
 
 gulp.task('help', help);
 gulp.task('default', ['help']);
