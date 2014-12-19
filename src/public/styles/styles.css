@@ -125,7 +125,7 @@ keyframes slideOut {
 .slide {
   width: 75%;
   height: 50%;
-  height: 50vh;
+  height: 75vh;
   border: 2px solid white;
   border-radius: 5px;
   color: white;
@@ -143,6 +143,7 @@ keyframes slideOut {
 h1 {
   font-size: 6vw;
   letter-spacing: 1px;
+  margin-bottom: 0;
 }
 
 .slide-arrow:hover {
@@ -162,8 +163,46 @@ h1 {
   right: 5px;
 }
 
+.navbar {
+  position: fixed;
+  top: 0px;
+  left: 10%;
+}
+
+.nav-list li {
+  color: rgb(233, 233, 233);
+  transition: color .35s ease;
+  display: inline-block;
+  font-weight: bold;
+  text-align: left;
+  width: 100px;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: white;
+  text-decoration: none;
+}
+
 .nav {
   display: inline-block;
+}
+
+.service-list {
+  list-style-type: none;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.service-list > li > i.fa {
+  margin-right: 10px;
+}
+
+.start-hidden {
+  display: none;
 }
 
 .designed-by {
