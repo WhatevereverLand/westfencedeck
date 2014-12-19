@@ -52,7 +52,7 @@ gulp.task('javascript', function() {
 
   // Concatenate them and then point the map to them.
   glob
-    .pipe(uglify('app.js'))
+    .pipe(concat('app.js'))
 		.pipe(gulp.dest(options.buildDir + '/scripts'));
 });
 

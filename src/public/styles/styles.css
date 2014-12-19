@@ -13,39 +13,43 @@ body {
 
 @-moz-keyframes slideIn {
     0% {
-      top: -100px;
+      top: -2000px;
+      display: block;
     }
     100% {
       top:100px;
+      display: block;
     }
 }
 @-webkit-keyframes slideIn {
     0% {
-      top: -100px;
+      top: -2000px;
+      display: block;
     }
     100% {
       top:100px;
+      display: block;
     }
 }
 @keyframes slideIn {
     0% {
-      top: -100px;
+      top: -2000px;
+      display: block;
     }
     100% {
       top:100px;
+      display: block;
     }
 }
 
 @-moz-keyframes slideOut {
   0%{
     top:100px;
-    left: 0px;
   }
   90% {
     opacity: 100%;
   }
   100%{
-    left: 0px;
     top:25000px;
     opacity: 0%;
   }
@@ -54,13 +58,11 @@ body {
 @-webkit-keyframes slideOut {
   0%{
     top:100px;
-    left: 0px;
   }
   90% {
     opacity: 100%;
   }
   100%{
-    left: 0px;
     top:2000px;
     opacity: 0%;
   }
@@ -69,13 +71,11 @@ body {
 keyframes slideOut {
   0%{
     top:100px;
-    left: 0px;
   }
   90% {
     opacity: 100%;
   }
   100%{
-    left: 0px;
     top:2500px;
     opacity: 0%;
   }
@@ -86,7 +86,7 @@ keyframes slideOut {
 }
 
 .slidein {
-    position: relative;
+    position: absolute;
     -moz-animation-name: slideIn;
     -moz-animation-timing-function: ease-out;
     -moz-animation-duration: .1s;
@@ -101,11 +101,31 @@ keyframes slideOut {
     animation-timing-function: ease-out;
     animation-duration: .1s;
     animation-fill-mode: forwards;
+
+    display: block;
 }
 
+.slidein-delayed {
+    position: absolute;
+    -moz-animation-name: slideIn;
+    -moz-animation-timing-function: ease-out;
+    -moz-animation-duration: .1s;
+    -moz-animation-fill-mode: forwards;
+
+    -webkit-animation-name: slideIn;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: .1s;
+    -webkit-animation-fill-mode: forwards;
+
+    animation-name: slideIn;
+    animation-timing-function: ease-out;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+
+}
 
 .slideout {
-    position: relative;
+    position: absolute;
     -moz-animation-name: slideOut;
     -moz-animation-timing-function: ease-in;
     -moz-animation-duration: .5s;
@@ -123,7 +143,7 @@ keyframes slideOut {
 }
 
 .slide {
-  width: 75%;
+  width: 98%;
   height: 50%;
   height: 75vh;
   border: 2px solid white;
