@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="./styles/styles.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400' rel='stylesheet' type='text/css'>
   <link href='http://cdn.jsdelivr.net/waffles/latest/waffles.min.css' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
   <script type="text/javascript" src="./scripts/app.js"/></script>
 </head>
@@ -13,25 +14,30 @@
 <body>
       <div class="navbar">
         <ul class="nav-list">
-          <li><a class="nav-link">home</a></li>
-          <li><a class="nav-link">fences</a></li>
-          <li><a class="nav-link">decks</a></li>
-          <li><a class="nav-link">about</a></li>
-          <li><a class="nav-link">contact</a></li>
+          <li><i class="fa fa-home"></i> <a href="#home" class="nav-link">home</a></li>
+          <li><i class="fa fa-barcode"></i> <a href="#fences" class="nav-link">fences</a></li>
+          <li><i class="fa fa-bars"></i> <a href="#decks" class="nav-link">decks</a></li>
+          <li><i class="fa fa-info"></i> <a href="#about" class="nav-link">about</a></li>
+          <li><i class="fa fa-envelope"></i> <a href="#contact" class="nav-link">contact</a></li>
         </ul>
+
+        <div class="social">
+          <i class="fa fa-twitter-square fa-2x"></i>
+          <i class="fa fa-facebook-square fa-2x"></i>
+        </div>
+
       </div>
 
-    <div id="home-slide" class="centered bordered slidein slide">
+    <a name="home"></a>
+    <div id="home-slide" class="centered bordered slide">
       <div class="slide-content waffles">
         <div class="w-12">
           <h1>West Fence and Deck</h1>
 
           <h3>We have 15 years of experience been proudly serving the OKC</h3>
-          <br/><br/>
 
           <div class="w-12 center">
-      
-            <div class="w-4 center">
+            <div class="w-3 center">
               <div class="centered title">Fences</div>
 
               <div class="centered">
@@ -43,12 +49,12 @@
               </div>
             </div>
 
-            <div class="w-4">
-              <img class="thumbnail" src="/images/capped-deck-web.jpg"/>
+            <div class="w-6">
+              <img class="thumbnail" src="/images/capped-deck-thumb.jpg"/>
             </div>
 
-            <div class="w-4">
-              <div class="title">Decks</div>
+            <div class="w-3 center">
+              <div class="title centered">Decks</div>
 
               <div class="centered">
                 <div> Cedar </div>
@@ -59,96 +65,33 @@
               </div>
             </div>
 
-            <div class="w-12">
+            <div class="w-12 w-v-5">
               <div class="subtitle">Other great services we offer:</div>
-            
-              <div>
-                Custom-built Cedar Pergolas
-              </div>
-              <div>
-                We offer a variety of different stains for fences, decks and pergolas.
-              </div>
-
+              <div> Custom-built Cedar Pergolas </div>
+              <div> We offer a variety of different stains for fences, decks and pergolas.  </div>
             </div>
-
-        </div>
-
-        <div class="slide-arrow slide-arrow-down">
-          <i class="fa fa-chevron-circle-down fa-2x"></i>
+          </div>
         </div>
       </div>
     </div>
 
-    <div id="fences-slide" class="centered bordered slide start-hidden">
-      <div class="slide-content">
-        <div class="slide-arrow slide-arrow-up">
-          <i class="fa fa-chevron-circle-up fa-2x"></i>
-        </div>
-        <div class="slide-arrow slide-arrow-down">
-          <i class="fa fa-chevron-circle-down fa-2x"></i>
+    <div id="fences-slide" class="centered bordered slide">
+      <a name="fences"></a>
+      <div class="slide-content waffles">
+        <div class="w-12">
+          <h1>Fences</h1>
         </div>
       </div>
     </div>
 
-    <div id="decks-slide" class="centered bordered slide start-hidden">
-      <div class="slide-content">
-        explanation of deck things
-        <div class="slide-arrow slide-arrow-up">
-          <i class="fa fa-chevron-circle-up fa-2x"></i>
-        </div>
-        <div class="slide-arrow slide-arrow-down">
-          <i class="fa fa-chevron-circle-down fa-2x"></i>
+    <div id="decks-slide" class="centered bordered slide">
+      <a name="decks"></a>
+      <div class="slide-content waffles">
+        <div class="w-12">
+          <h1>Decks</h1>
         </div>
       </div>
     </div>
-
-    <div id="other-slide" class="centered bordered slide start-hidden">
-      <div class="slide-content">
-        pergolas here
-        <div class="slide-arrow slide-arrow-up">
-          <i class="fa fa-chevron-circle-up fa-2x"></i>
-        </div>
-        <div class="slide-arrow slide-arrow-down">
-          <i class="fa fa-chevron-circle-down fa-2x"></i>
-        </div>
-      </div>
-    </div>
-
-    <div id="qualification-slide" class="centered bordered slide start-hidden">
-      <div class="slide-content">
-        WFD is fully insured and bonded and has been in business for
-        [time here]
-        <div class="slide-arrow slide-arrow-up">
-          <i class="fa fa-chevron-circle-up fa-2x"></i>
-        </div>
-        <div class="slide-arrow slide-arrow-down">
-          <i class="fa fa-chevron-circle-down fa-2x"></i>
-        </div>
-      </div>
-    </div>
-
-    <div id="contact-slide" class="start-hidden">
-      <form>
-        Name: <input type='text' placeholder=''/>
-        Phone Number: <input type='text' placeholder=''/>
-        I'm interested in
-        <select id='serviceType' name='serviceType'>
-          <option>Fence</option>
-          <option>Deck</option>
-        </select>
-        Comment: <input type='text' placeholder=''/>
-        How did you find us?
-        <select>
-          <option>Word of mouth</option>
-          <option>Google</option>
-          <option>Other</option>
-        </select>
-      </form>
-        <div class="slide-arrow slide-arrow-up">
-          <i class="fa fa-chevron-circle-up fa-2x"></i>
-        </div>
-    </div>
-
     <div class="designed-by">
       &copy; West Fence &amp; Deck, LLC.
       Designed by <a href="http://whateverever.land">whateverever.land</a></div>

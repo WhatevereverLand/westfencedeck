@@ -1,5 +1,4 @@
 body {
-  overflow: hidden;
   background-image: url('../images/woodblurred.jpg');
   background-size: 100% auto;
   font-family: 'Open Sans', sans-serif;
@@ -27,143 +26,17 @@ body {
 }
 
 .thumbnail {
-  width: 300px;
+  width: 500px;
 }
 
-@-moz-keyframes slideIn {
-    0% {
-      top: -2000px;
-      display: block;
-    }
-    100% {
-      top:100px;
-      display: block;
-    }
-}
-@-webkit-keyframes slideIn {
-    0% {
-      top: -2000px;
-      display: block;
-    }
-    100% {
-      top:100px;
-      display: block;
-    }
-}
-@keyframes slideIn {
-    0% {
-      top: -2000px;
-      display: block;
-    }
-    100% {
-      top:100px;
-      display: block;
-    }
-}
-
-@-moz-keyframes slideOut {
-  0%{
-    top:100px;
-  }
-  90% {
-    opacity: 100%;
-  }
-  100%{
-    top:25000px;
-    opacity: 0%;
-  }
-}
-
-@-webkit-keyframes slideOut {
-  0%{
-    top:100px;
-  }
-  90% {
-    opacity: 100%;
-  }
-  100%{
-    top:2000px;
-    opacity: 0%;
-  }
-}
-
-keyframes slideOut {
-  0%{
-    top:100px;
-  }
-  90% {
-    opacity: 100%;
-  }
-  100%{
-    top:2500px;
-    opacity: 0%;
-  }
-}
 
 .bordered {
   border: 1px solid black;
 }
 
-.slidein {
-    position: absolute;
-    -moz-animation-name: slideIn;
-    -moz-animation-timing-function: ease-out;
-    -moz-animation-duration: .1s;
-    -moz-animation-fill-mode: forwards;
-
-    -webkit-animation-name: slideIn;
-    -webkit-animation-timing-function: ease-out;
-    -webkit-animation-duration: .1s;
-    -webkit-animation-fill-mode: forwards;
-
-    animation-name: slideIn;
-    animation-timing-function: ease-out;
-    animation-duration: .1s;
-    animation-fill-mode: forwards;
-
-    display: block;
-}
-
-.slidein-delayed {
-    position: absolute;
-    -moz-animation-name: slideIn;
-    -moz-animation-timing-function: ease-out;
-    -moz-animation-duration: .1s;
-    -moz-animation-fill-mode: forwards;
-
-    -webkit-animation-name: slideIn;
-    -webkit-animation-timing-function: ease-out;
-    -webkit-animation-duration: .1s;
-    -webkit-animation-fill-mode: forwards;
-
-    animation-name: slideIn;
-    animation-timing-function: ease-out;
-    animation-duration: .1s;
-    animation-fill-mode: forwards;
-
-}
-
-.slideout {
-    position: absolute;
-    -moz-animation-name: slideOut;
-    -moz-animation-timing-function: ease-in;
-    -moz-animation-duration: .5s;
-    -moz-animation-fill-mode: forwards;
-
-    -webkit-animation-name: slideOut;
-    -webkit-animation-timing-function: ease-in;
-    -webkit-animation-duration: .5s;
-    -webkit-animation-fill-mode: forwards;
-
-    animation-name: slideOut;
-    animation-timing-function: ease-in;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-}
-
 .slide {
+  margin-top: 75px;
   width: 98%;
-  height: 700px;
   border: 2px solid white;
   border-radius: 5px;
   color: white;
@@ -193,22 +66,34 @@ h1 {
   position: absolute;
   top: 5px;
   right: 5px;
+  font-weight: bold;
 }
 
 .slide-arrow-down {
   position: absolute;
   bottom: 5px;
   right: 5px;
+  font-weight: bold;
 }
 
 .navbar {
   position: fixed;
   top: 0px;
-  left: 10%;
+  z-index: 10000;
+  height: 50px;
+  width: 100%;
+  background: white;
+  margin-left: 0px;
+  margin-right: 0px;
+  color: black;
+  left: 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.817647) 0px 1px 6px 0px;
+  -webkit-font-smoothing: antialiased;
 }
 
+
 .nav-list li {
-  color: rgb(233, 233, 233);
+  color: rgb(30, 30, 30);
   transition: color .35s ease;
   display: inline-block;
   font-weight: bold;
@@ -216,12 +101,30 @@ h1 {
   width: 100px;
 }
 
+.social {
+  position: fixed;
+  top: 10px;
+  right: 5px;
+  z-index: 200000;
+}
+
+.fa-twitter-square {
+  color: rgb(0,172,237);
+}
+
+.fa-facebook-square {
+  color: rgb(59,89,152);
+}
+.nav-list i {
+  color: darkred;
+}
+
 .nav-link {
   cursor: pointer;
 }
 
 .nav-link:hover {
-  color: white;
+  color: darkred; //rgb(0,0,0);
   text-decoration: none;
 }
 
