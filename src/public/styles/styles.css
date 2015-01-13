@@ -25,10 +25,13 @@ body {
   font-size: 1.5em;
 }
 
-.thumbnail {
-  width: 500px;
+.logo {
+  width: 400px;
 }
 
+.thumbnail {
+  width: 300px;
+}
 
 .bordered {
   border: 1px solid black;
