@@ -150,10 +150,14 @@ h1 {
 }
 
 .designed-by {
-  font-size: 10px;
+  font-size: 14px;
   position: fixed;
   bottom: 0px;
   color: white;
+}
+
+.designed-by a {
+  color: slateblue;
 }
 
 a:link {
