@@ -16,14 +16,23 @@ body {
   margin: 0 auto;
 }
 
+h1.west {
+  font-weight: bold;
+  font-size: 10vh;
+  font-family: 'PT Sans Caption', 'Open Sans', 'Arial', sans-serif;
+  text-transform: uppercase;
+}
+
 .title {
   font-weight: bold;
-  font-size: 2.0em;
+  font-size: 3.0em;
+  font-family: 'PT Sans Caption', 'Open Sans', 'Arial', sans-serif;
+  text-transform: uppercase;
 }
 
 .subtitle {
   font-weight: bold;
-  font-size: 3.5em;
+  font-size: 2.0em;
 }
 
 .logo {
