@@ -1,4 +1,6 @@
 body {
+  min-width: 1200px;
+  overflow: scroll;
   background-image: url('../images/woodblurred.jpg');
   background-size: 100% auto;
   background-attachment: fixed;
